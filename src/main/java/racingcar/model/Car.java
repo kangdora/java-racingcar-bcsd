@@ -1,9 +1,9 @@
 package racingcar.model;
 
-import java.util.Random;
+import camp.nextstep.edu.missionutils.Randoms;
 
 public class Car{
-    private String name;
+    private final String name;
     private int position;
 
     public Car(String name) {
@@ -18,8 +18,7 @@ public class Car{
     }
 
     private int rollDice() {
-        Random rd = new Random();
-        return rd.nextInt(10);
+        return Randoms.pickNumberInRange(0,9);
     }
 
     public String getName(){
