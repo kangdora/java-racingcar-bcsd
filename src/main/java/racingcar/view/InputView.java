@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class InputView {
-    Scanner sc = new Scanner(System.in);
+    private final Scanner sc = new Scanner(System.in);
 
     public List<String> inputCarName() {
         System.out.println("차의 이름을 입력해주세요(구분은 ,로)");
