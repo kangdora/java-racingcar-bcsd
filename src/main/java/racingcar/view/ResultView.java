@@ -5,13 +5,12 @@ import java.util.Map;
 
 public class ResultView {
     public void printWinner(List<String> carNames) {
-        System.out.print("우승자는 ");
+        System.out.print("최종 우승자 : ");
 
         for (String car : carNames) {
             System.out.print(car);
         }
-
-        System.out.print("입니다.");
+        // TODO: 최종 우승자 Stream API로 구분자 추가해서 로직만들기
     }
 
     public void printResult(List<Map<String, String>> carPos) {
