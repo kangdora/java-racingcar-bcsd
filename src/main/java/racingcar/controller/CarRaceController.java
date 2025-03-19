@@ -16,7 +16,7 @@ public class CarRaceController {
 
     public void run() {
         Cars cars = new Cars(participateCars());
-        int raceCount = inputView.inputRaceCount();
+        int raceCount = getRaceCount();
 
         runGames(cars, raceCount);
 
@@ -31,6 +31,14 @@ public class CarRaceController {
         carNames.stream().map(Car::new).forEach(carList::add);
 
         return carList;
+    }
+
+    private int getRaceCount(){
+        int raceCount = inputView.inputRaceCount();
+        if (raceCount <= 0) {
+            throw new IllegalArgumentException("경주는 최소 1회 이상이 진행되어야 합니다.");
+        }
+        return raceCount;
     }
 
     private void runGames(Cars cars, int raceCount) {

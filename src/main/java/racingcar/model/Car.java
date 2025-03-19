@@ -7,6 +7,10 @@ public class Car{
     private int position;
 
     public Car(String name) {
+        if (name == null || name.isEmpty() || name.length() > 5) {
+            throw new IllegalArgumentException("이름이 조건과 맞지 않습니다.");
+        }
+
         this.name = name;
         position = 0;
     }
