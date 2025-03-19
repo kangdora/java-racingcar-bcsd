@@ -11,8 +11,13 @@ import java.util.List;
 import java.util.Map;
 
 public class CarRaceController {
-    InputView inputView = new InputView();
-    ResultView resultView = new ResultView();
+    private final InputView inputView;
+    private final ResultView resultView;
+
+    public CarRaceController(InputView inputView, ResultView resultView) {
+        this.inputView = inputView;
+        this.resultView = resultView;
+    }
 
     public void run() {
         Cars cars = new Cars(participateCars());
