@@ -1,5 +1,6 @@
 package racingcar.controller;
 
+import racingcar.ErrorMessage;
 import racingcar.model.Car;
 import racingcar.model.Cars;
 import racingcar.view.InputView;
@@ -41,7 +42,7 @@ public class CarRaceController {
     private int getRaceCount() {
         int raceCount = inputView.inputRaceCount();
         if (raceCount <= 0) {
-            throw new IllegalArgumentException("경주는 최소 1회 이상이 진행되어야 합니다.");
+            throw new IllegalArgumentException(ErrorMessage.INVAILD_RACECOUNT.getMessage());
         }
         return raceCount;
     }

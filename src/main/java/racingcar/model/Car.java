@@ -1,6 +1,7 @@
 package racingcar.model;
 
 import camp.nextstep.edu.missionutils.Randoms;
+import racingcar.ErrorMessage;
 
 public class Car{
     private final String name;
@@ -8,7 +9,7 @@ public class Car{
 
     private Car(String name) {
         if (name == null || name.isEmpty() || name.length() > 5) {
-            throw new IllegalArgumentException("이름이 조건과 맞지 않습니다.");
+            throw new IllegalArgumentException(ErrorMessage.INVAILD_CARNAME.getMessage());
         }
         this.name = name;
         position = 0;
