@@ -16,4 +16,8 @@ public class ResultView {
     public void printWinner(List<String> carNames) {
         System.out.println("최종 우승자 : " + String.join(", ", carNames));
     }
+
+    public void printGameStart(){
+        System.out.println("실행 결과");
+    }
 }

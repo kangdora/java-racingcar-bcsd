@@ -47,7 +47,7 @@ public class CarRaceController {
     }
 
     private void runGames(Cars cars, int raceCount) {
-        System.out.println("실행 결과");
+        resultView.printGameStart();
         for (int i = 0; i < raceCount; i++) {
             cars.moveCars();
             displayData(cars.getCars());
